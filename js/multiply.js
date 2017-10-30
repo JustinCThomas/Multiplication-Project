@@ -3,6 +3,7 @@ var numberBoxes = document.getElementsByClassName("number-box");
 var value1 = document.getElementById("value1");
 var value2 = document.getElementById("value2");
 var correctness = document.querySelector("#correctness");
+var newProblem = document.getElementById("new-problem");
 
 /*
 Make the page look nicer and smoother
@@ -19,6 +20,7 @@ init();
 function init() {
   setupGame();
   addBoxEvents();
+  newProblemEvent();
 }
 
 function getRandomNum() {
@@ -70,4 +72,14 @@ function removeBoxEvents() {
   for (var i = 0; i < numberBoxes.length; i++) {
     numberBoxes[i].removeEventListener('click', check);
   }
+}
+
+function newProblemEvent() {
+  newProblem.addEventListener('click', function() {
+    correctness.textContent = "What's the answer?";
+    for (var i = 0; i < numberBoxes.length; i++) {
+      numberBoxes[i].style.backgroundColor = "orange";
+    }
+    init();
+  });
 }

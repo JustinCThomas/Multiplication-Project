@@ -12,7 +12,6 @@ body {
 
 header {
   background: white;
-  /*margin-top: 20px;*/
   padding: 20px 0;
 }
 
@@ -23,6 +22,21 @@ p {
 #correctness {
   display: inline-block;
   width: 15%;
+}
+
+
+button {
+  /*border: none;
+  background: none;
+  outline: none;*/
+  font-weight: 700;
+  height: 100%;
+  font-size: 16px;
+  padding: 2px;
+}
+
+#new-problem {
+
 }
 
 .container {
