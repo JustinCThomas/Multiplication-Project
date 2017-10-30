@@ -20,15 +20,19 @@ Add a timer, make it 10 seconds for now;
 init();
 
 function init() {
+  gameLogic()
+  newProblemEvent();
+}
+
+function gameLogic() {
   setupGame();
   addBoxEvents();
-  newProblemEvent();
 }
 
 function getRandomNum1() {
   if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
   && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
-    var randomNum1 = Math.floor(Math.random() * factorOneMax.value);
+    var randomNum1 = Math.floor(Math.random() * (parseInt(factorOneMax.value) + 1));
     return randomNum1;
   } else {
     var randomNum1 = Math.floor(Math.random() * 101);
@@ -39,7 +43,7 @@ function getRandomNum1() {
 function getRandomNum2() {
   if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
   && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
-    var randomNum2 = Math.floor(Math.random() * factorTwoMax.value);
+    var randomNum2 = Math.floor(Math.random() * (parseInt(factorTwoMax.value) + 1));
     return randomNum2;
   } else {
     var randomNum2 = Math.floor(Math.random() * 101);
@@ -99,6 +103,6 @@ function newProblemEvent() {
     for (var i = 0; i < numberBoxes.length; i++) {
       numberBoxes[i].style.backgroundColor = "orange";
     }
-    init();
+    gameLogic();
   });
 }
