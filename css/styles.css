@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: skyblue;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+header {
+  background: white;
+  /*margin-top: 20px;*/
+  padding: 20px 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+#correctness {
+  display: inline-block;
+  width: 15%;
+}
+
+.container {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.container .number-box {
+  padding-top: 30%;
+  background: orange;
+  border-radius: 15%;
+  margin: 1.66%;
+  width: 30%;
+  /*display: inline-block;*/
+  /*text-align: center;*/
+  float: left;
+  position: relative;
+  transition: all ease-in-out .6s;
+}
+
+.container .number-box .number {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: snow;
+  font-weight: 700;
+  font-size: 20px;
+}
