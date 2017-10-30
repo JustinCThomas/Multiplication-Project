@@ -4,6 +4,8 @@ var value1 = document.getElementById("value1");
 var value2 = document.getElementById("value2");
 var correctness = document.querySelector("#correctness");
 var newProblem = document.getElementById("new-problem");
+var factorOneMax = document.querySelector("input[name='firstFactorMax']");
+var factorTwoMax = document.querySelector("input[name='secondFactorMax']");
 
 /*
 Make the page look nicer and smoother
@@ -23,10 +25,54 @@ function init() {
   newProblemEvent();
 }
 
-function getRandomNum() {
-  var randomNum = Math.floor(Math.random() * 100);
+function getRandomNum1() {
+  if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
+  && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
+    var randomNum1 = Math.floor(Math.random() * factorOneMax.value);
+    return randomNum1;
+  } else {
+    var randomNum1 = Math.floor(Math.random() * 101);
+    return randomNum1;
+  }
+
+}
+
+
+function getRandomNum2() {
+  var randomNum = Math.floor(Math.random() * 101);
   return randomNum;
 }
+
+
+function getCustomRandomNum() {
+  var randomNum1 = Math.floor(Math.random() * (factorOneMax.value + 1));
+  var randomNum2 = Math.floor(Math.random() * (factorTwoMax.value + 1));
+  var arr = [randomNum1, randomNum2];
+  return arr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function multiply(num1, num2) {
   var answer = num1 * num2;
