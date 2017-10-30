@@ -34,45 +34,18 @@ function getRandomNum1() {
     var randomNum1 = Math.floor(Math.random() * 101);
     return randomNum1;
   }
-
 }
-
 
 function getRandomNum2() {
-  var randomNum = Math.floor(Math.random() * 101);
-  return randomNum;
+  if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
+  && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
+    var randomNum2 = Math.floor(Math.random() * factorTwoMax.value);
+    return randomNum2;
+  } else {
+    var randomNum2 = Math.floor(Math.random() * 101);
+    return randomNum2;
+  }
 }
-
-
-function getCustomRandomNum() {
-  var randomNum1 = Math.floor(Math.random() * (factorOneMax.value + 1));
-  var randomNum2 = Math.floor(Math.random() * (factorTwoMax.value + 1));
-  var arr = [randomNum1, randomNum2];
-  return arr;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function multiply(num1, num2) {
   var answer = num1 * num2;
@@ -84,7 +57,7 @@ function setupGame() {
   var x = Math.floor(Math.random() * numbers.length)
 
   for (var i = 0; i < numbers.length; i++) {
-    var arr = multiply(getRandomNum(), getRandomNum());
+    var arr = multiply(getRandomNum1(), getRandomNum2());
     numbers[i].textContent = arr[0];
     if (x === i) {
       chooseEquation(arr);
