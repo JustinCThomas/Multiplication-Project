@@ -9,12 +9,8 @@ var factorTwoMax = document.querySelector("input[name='secondFactorMax']");
 
 /*
 Make the page look nicer and smoother
-Add a button to get a new set of numbers
 possibly change the color scheme
-An option to change how large the factors can be. e.g.( max of 25)
 Maybe add a score system
-Add a timer, make it 10 seconds for now;
-
 */
 
 init();
