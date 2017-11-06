@@ -10,7 +10,6 @@ var factorTwoMax = document.querySelector("input[name='secondFactorMax']");
 /*
 Make the page look nicer and smoother
 possibly change the color scheme
-Maybe add a score system
 */
 
 init();
