@@ -11,32 +11,51 @@ body {
 }
 
 header {
-  background: white;
-  padding: 20px 0;
+  background: rgb(220, 220, 220);
+  padding: 20px 0 20px 0;
 }
 
 p {
   font-size: 20px;
 }
 
-#correctness {
-  display: inline-block;
-  width: 15%;
+#optional {
+  font-weight: 700;
 }
 
+#band {
+  background-color: white;
+  text-align: center;
+  height: 50px;
+  position: relative;
+}
+
+#correctness {
+  height: 100%;
+  line-height: 300%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 button {
-  /*border: none;
+  border: none;
   background: none;
-  outline: none;*/
+  outline: none;
+  text-transform: uppercase;
   font-weight: 700;
   height: 100%;
   font-size: 16px;
   padding: 2px;
+  position: absolute;
+  left: calc(50% + 100px);
+  transform: translateX(-20%);
+  transition: all .6s;
 }
 
-#new-problem {
-
+button:hover {
+  color: blue;
+  background-color:  rgb(220, 220, 220);
 }
 
 .container {
@@ -66,5 +85,5 @@ button {
   transform: translate(-50%, -50%);
   color: snow;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
 }

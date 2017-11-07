@@ -78,7 +78,7 @@ function addBoxEvents() {
 function check(){
   if ( (Number(this.textContent)) === (Number(value1.textContent) * Number(value2.textContent)) ) {
     correctness.textContent = "Correct!";
-    this.style.backgroundColor = "lime";
+    this.style.backgroundColor = "#11d011";
     removeBoxEvents();
   } else {
     this.style.backgroundColor = "red";
@@ -94,7 +94,7 @@ function removeBoxEvents() {
 
 function newProblemEvent() {
   newProblem.addEventListener('click', function() {
-    correctness.textContent = "What's the answer?";
+    correctness.textContent = "";
     for (var i = 0; i < numberBoxes.length; i++) {
       numberBoxes[i].style.backgroundColor = "orange";
     }
