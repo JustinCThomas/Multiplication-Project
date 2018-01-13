@@ -87,3 +87,15 @@ button:hover {
   font-weight: 700;
   font-size: 22px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container .number-box {
+    padding-top: 25%;
+    width: 25%;
+    margin: 4.16666%;
+  }
+
+  .container .number-box .number {
+    font-size: 18px;
+  }
+}
