@@ -48,7 +48,7 @@ button {
   font-size: 16px;
   padding: 2px;
   position: absolute;
-  left: calc(50% + 100px);
+  left: calc(50% + 195px);
   transform: translateX(-20%);
   transition: all .6s;
 }
@@ -97,5 +97,33 @@ button:hover {
 
   .container .number-box .number {
     font-size: 18px;
+  }
+
+  header {
+    padding: 10px 0 10px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    left: calc(50% + 80px);
+  }
+}
+/* Specifically for the iPhone 4*/
+@media only screen and (max-width: 320px) {
+  .container .number-box {
+    padding-top: 22%;
+    width: 22%;
+    margin: 3% 5.666667% 3% 5.666667%;
+  }
+
+  .container .number-box .number {
+    font-size: 16px;
   }
 }
