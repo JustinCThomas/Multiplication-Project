@@ -1,11 +1,11 @@
-var numbers = document.getElementsByClassName("number");
-var numberBoxes = document.getElementsByClassName("number-box");
-var value1 = document.getElementById("value1");
-var value2 = document.getElementById("value2");
-var correctness = document.querySelector("#correctness");
-var newProblem = document.getElementById("new-problem");
-var factorOneMax = document.querySelector("input[name='firstFactorMax']");
-var factorTwoMax = document.querySelector("input[name='secondFactorMax']");
+let numbers = document.getElementsByClassName("number");
+let numberBoxes = document.getElementsByClassName("number-box");
+let value1 = document.getElementById("value1");
+let value2 = document.getElementById("value2");
+let correctness = document.querySelector("#correctness");
+let newProblem = document.getElementById("new-problem");
+let factorOneMax = document.querySelector("input[name='firstFactorMax']");
+let factorTwoMax = document.querySelector("input[name='secondFactorMax']");
 
 /*
 Make the page look nicer and smoother
@@ -27,10 +27,10 @@ function gameLogic() {
 function getRandomNum1() {
   if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
   && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
-    var randomNum1 = Math.floor(Math.random() * (parseInt(factorOneMax.value) + 1));
+    let randomNum1 = Math.floor(Math.random() * (parseInt(factorOneMax.value) + 1));
     return randomNum1;
   } else {
-    var randomNum1 = Math.floor(Math.random() * 101);
+    let randomNum1 = Math.floor(Math.random() * 101);
     return randomNum1;
   }
 }
@@ -38,25 +38,25 @@ function getRandomNum1() {
 function getRandomNum2() {
   if ( (parseInt(factorOneMax.value) >= 0 && parseInt(factorOneMax.value) <= 100)
   && (parseInt(factorTwoMax.value) >= 0 && parseInt(factorTwoMax.value) <= 100) ) {
-    var randomNum2 = Math.floor(Math.random() * (parseInt(factorTwoMax.value) + 1));
+    let randomNum2 = Math.floor(Math.random() * (parseInt(factorTwoMax.value) + 1));
     return randomNum2;
   } else {
-    var randomNum2 = Math.floor(Math.random() * 101);
+    let randomNum2 = Math.floor(Math.random() * 101);
     return randomNum2;
   }
 }
 
 function multiply(num1, num2) {
-  var answer = num1 * num2;
-  var variables = [answer, num1, num2];
-  return variables;
+  let answer = num1 * num2;
+  let letiables = [answer, num1, num2];
+  return letiables;
 }
 
 function setupGame() {
-  var x = Math.floor(Math.random() * numbers.length)
+  let x = Math.floor(Math.random() * numbers.length)
 
-  for (var i = 0; i < numbers.length; i++) {
-    var arr = multiply(getRandomNum1(), getRandomNum2());
+  for (let i = 0; i < numbers.length; i++) {
+    let arr = multiply(getRandomNum1(), getRandomNum2());
     numbers[i].textContent = arr[0];
     if (x === i) {
       chooseEquation(arr);
@@ -70,7 +70,7 @@ function chooseEquation(arr) {
 }
 
 function addBoxEvents() {
-  for (var i = 0; i < numberBoxes.length; i++) {
+  for (let i = 0; i < numberBoxes.length; i++) {
     numberBoxes[i].addEventListener('click', check);
   }
 }
@@ -87,7 +87,7 @@ function check(){
 }
 
 function removeBoxEvents() {
-  for (var i = 0; i < numberBoxes.length; i++) {
+  for (let i = 0; i < numberBoxes.length; i++) {
     numberBoxes[i].removeEventListener('click', check);
   }
 }
@@ -95,7 +95,7 @@ function removeBoxEvents() {
 function newProblemEvent() {
   newProblem.addEventListener('click', function() {
     correctness.textContent = "";
-    for (var i = 0; i < numberBoxes.length; i++) {
+    for (let i = 0; i < numberBoxes.length; i++) {
       numberBoxes[i].style.backgroundColor = "orange";
     }
     gameLogic();
