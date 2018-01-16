@@ -48,8 +48,8 @@ function getRandomNum2() {
 
 function multiply(num1, num2) {
   let answer = num1 * num2;
-  let letiables = [answer, num1, num2];
-  return letiables;
+  let variables = [answer, num1, num2];
+  return variables;
 }
 
 function setupGame() {
