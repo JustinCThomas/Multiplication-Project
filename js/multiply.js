@@ -30,7 +30,7 @@ function getRandomNum1() {
     let randomNum1 = Math.floor(Math.random() * (parseInt(factorOneMax.value) + 1));
     return randomNum1;
   } else {
-    let randomNum1 = Math.floor(Math.random() * 101);
+    let randomNum1 = Math.floor(Math.random() * 13);
     return randomNum1;
   }
 }
@@ -41,7 +41,7 @@ function getRandomNum2() {
     let randomNum2 = Math.floor(Math.random() * (parseInt(factorTwoMax.value) + 1));
     return randomNum2;
   } else {
-    let randomNum2 = Math.floor(Math.random() * 101);
+    let randomNum2 = Math.floor(Math.random() * 13);
     return randomNum2;
   }
 }
@@ -53,7 +53,7 @@ function multiply(num1, num2) {
 }
 
 function setupGame() {
-  let x = Math.floor(Math.random() * numbers.length)
+  let x = Math.floor(Math.random() * numbers.length);
 
   for (let i = 0; i < numbers.length; i++) {
     let arr = multiply(getRandomNum1(), getRandomNum2());
